@@ -20,227 +20,240 @@
 </head>
 
 <body>
-    <div class="bg">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 paper">
-                <!-- personal detail -->
-                <div class="personal-detail">
-                    <!-- title -->
-                    <div class="tittle">Personal Details</div>
-                    <!-- akhir title -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Wanted Job Title</span>
-                            <i class="fa-regular fa-circle-question"></i>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
+    <form class="row g-3 needs-validation" novalidate>
+
+        <div class="bg">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 paper">
+                    <!-- personal detail -->
+                    <div class="personal-detail">
+                        <!-- title -->
+                        <div class="tittle">Personal Details</div>
+                        <!-- akhir title -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Wanted Job Title</span>
+                                <i class="fa-regular fa-circle-question"></i>
+                                <div class="input-group mb-3">
+                                    <input type="text" min="3" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Foto</span>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control r" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Foto</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">First Name</span>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Last Name</span>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control r" required>
+                                </div>
                             </div>
                         </div>
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Email</span>
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Phone</span>
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control r" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Country</span>
+                                <div class="input-group mb-3">
+                                    <select name="" class="form-control l" required>
+                                        <option value="1">Indonesia</option>
+                                        <option value="2">Malaysia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">City</span>
+                                <div class="input-group mb-3">
+                                    <select name="" class="form-control r" required>
+                                        <option value="1">lajsdjsa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Address</span>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Postal Code</span>
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control r" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Driving Licence</span>
+                                <i class="fa-regular fa-circle-question"></i>
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Nationality</span>
+                                <i class="fa-regular fa-circle-question"></i>
+                                <div class="input-group mb-3">
+                                    <select name="" class="form-control r" required>
+                                        <option value="WNI">Warga Negara Indonesia (WNI)</option>
+                                        <option value="WNA">Warga Negara Asing (WNA)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="label-text-l">Place Of Birth</span>
+                                <div class="input-group mb-3">
+                                    <input type="text" pattern="[A-Za-z]{>3}" class="form-control l" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="label-text-r">Date Of Birth</span>
+                                <i class="fa-regular fa-circle-question"></i>
+                                <div class="input-group mb-3">
+                                    <input type="date" class="form-control r" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- akhir baris -->
                     </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">First Name</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
+                    <!-- akhir personal detail -->
+                    <!-- summary -->
+                    <div class="personal-detail">
+                        <!-- title -->
+                        <div class="tittle">Professional Summary</div>
+                        <!-- akhir title -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="label-text-l">Write 2-4 short & energetic sentence to interest the reader! Mention you role, experience & most importantly - your biggest achievements, best qualities and skills.</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Last Name</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-12 editor">
+                                <textarea id="editor" name="summary"></textarea>
                             </div>
                         </div>
+                        <!-- akhir baris -->
                     </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Email</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
+                    <!-- akhir summary -->
+                    <!-- employment History -->
+                    <div class="personal-detail">
+                        <!-- title -->
+                        <div class="tittle">Employment History</div>
+                        <!-- akhir title -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="label-text-l">Show your relevant experience (last 10 years). Use bullet points to note your achieevements, if possible - use numbers/ fact (Achieved X, measured by Y, by doing Z).</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Phone</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <i class="fa-regular fa-plus"></i>
+                                <span class="added">Add Employment</span>
                             </div>
                         </div>
+                        <!-- akhir baris -->
                     </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Country</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
+                    <!-- akhir employment History -->
+                    <!-- Education -->
+                    <div class="personal-detail">
+                        <!-- title -->
+                        <div class="tittle">Education</div>
+                        <!-- akhir title -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="label-text-l">A varied education on your resume sums up the value that your learnings and background will bring to job.</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">City</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <i class="fa-regular fa-plus"></i>
+                                <span class="added">Add Education</span>
                             </div>
                         </div>
+                        <!-- akhir baris -->
                     </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Address</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
+                    <!-- akhir Education -->
+                    <!-- Skills -->
+                    <div class="personal-detail">
+                        <!-- title -->
+                        <div class="tittle">Skills</div>
+                        <!-- akhir title -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="label-text-l">Choose 5 of the most important skills to show your talents! Make sure they match the keywords of the job listing if appliying via an online system.</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Postal Code</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
+                        <!-- akhir baris -->
+                        <!-- baris -->
+                        <div class="row">
+                            <div class="skills_list">
+                                <span class="badge bg-secondary">New</span>
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa-regular fa-plus"></i>
+                                <span class="added">Add Skills</span>
                             </div>
                         </div>
+                        <!-- akhir baris -->
                     </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Driving Licence</span>
-                            <i class="fa-regular fa-circle-question"></i>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Nationality</span>
-                            <i class="fa-regular fa-circle-question"></i>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="label-text-l">Place Of Birth</span>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control l">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="label-text-r">Date Of Birth</span>
-                            <i class="fa-regular fa-circle-question"></i>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control r">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
+                    <!-- akhir Skills -->
+                    <button class="btn btn-primary" type="submit">Apply Form</button>
+
                 </div>
-                <!-- akhir personal detail -->
-                <!-- summary -->
-                <div class="personal-detail">
-                    <!-- title -->
-                    <div class="tittle">Professional Summary</div>
-                    <!-- akhir title -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="label-text-l">Write 2-4 short & energetic sentence to interest the reader! Mention you role, experience & most importantly - your biggest achievements, best qualities and skills.</div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-12 editor">
-                            <textarea id="editor" name="summary"></textarea>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                </div>
-                <!-- akhir summary -->
-                <!-- employment History -->
-                <div class="personal-detail">
-                    <!-- title -->
-                    <div class="tittle">Employment History</div>
-                    <!-- akhir title -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="label-text-l">Show your relevant experience (last 10 years). Use bullet points to note your achieevements, if possible - use numbers/ fact (Achieved X, measured by Y, by doing Z).</div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <i class="fa-regular fa-plus"></i>
-                            <span class="added">Add Employment</span>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                </div>
-                <!-- akhir employment History -->
-                <!-- Education -->
-                <div class="personal-detail">
-                    <!-- title -->
-                    <div class="tittle">Education</div>
-                    <!-- akhir title -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="label-text-l">A varied education on your resume sums up the value that your learnings and background will bring to job.</div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <i class="fa-regular fa-plus"></i>
-                            <span class="added">Add Education</span>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                </div>
-                <!-- akhir Education -->
-                <!-- Skills -->
-                <div class="personal-detail">
-                    <!-- title -->
-                    <div class="tittle">Skills</div>
-                    <!-- akhir title -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="label-text-l">Choose 5 of the most important skills to show your talents! Make sure they match the keywords of the job listing if appliying via an online system.</div>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                    <!-- baris -->
-                    <div class="row">
-                        <div class="skills_list">
-                            <span class="badge bg-secondary">New</span>
-                        </div>
-                        <div class="col-md-6">
-                            <i class="fa-regular fa-plus"></i>
-                            <span class="added">Add Skills</span>
-                        </div>
-                    </div>
-                    <!-- akhir baris -->
-                </div>
-                <!-- akhir Skills -->
+                <div class="col-md-3"></div>
             </div>
-            <div class="col-md-3"></div>
         </div>
-    </div>
+    </form>
 
     <style lang="textstyle/css">
         body {
@@ -312,10 +325,14 @@
             font-size: 12px;
         }
 
-        .bg-secondary{
+        .bg-secondary {
             margin-left: 30px;
-            margin-top:10px;
-            margin-bottom:10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-primary{
+            margin-top: 40px;
+            width: 100%;
         }
 
         #editor {
@@ -330,6 +347,26 @@
             size: 2
 
         });
+
+        (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
     </script>
 </body>
 
