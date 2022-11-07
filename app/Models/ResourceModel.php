@@ -6,5 +6,6 @@ use CodeIgniter\Model;
 
 class ResourceModel extends Model
 {
-    protected $table      = 'provinsi';
+    protected $table      = 'country';
+    // protected $tempUseSoftDeletes = true;
 }
