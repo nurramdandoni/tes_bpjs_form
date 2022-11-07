@@ -457,7 +457,8 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading` + num_education + `">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse` + num_education + `" aria-expanded="true" aria-controls="collapse` + num_education + `">
-                                                <span id="stack_list` + num_education + `">(Not specified)</span>
+                                            <span id="stack_list_education` + num_education + `">(Not specified)</span> &nbsp &nbsp|&nbsp &nbsp
+                                                <span id="year_stack_list_education` + num_education + `">(Not specified)</span>
                                             </button>
                                         </h2>
                                         <div id="collapse` + num_education + `" class="accordion-collapse collapse show" aria-labelledby="heading` + num_education + `" data-bs-parent="#accordionExample">
@@ -466,13 +467,13 @@
                                                     <div class="col-md-6">
                                                         <span class="label-text-l">School</span>
                                                         <div class="input-group mb-3">
-                                                            <input type="text" class="form-control l" required>
+                                                            <input name="text_edu" id="list_education`+num_education+`" onKeyup="stack_list_education('list_employment`+num_education+`')" type="text" class="form-control l" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <span class="label-text-r">Degree</span>
                                                         <div class="input-group mb-3">
-                                                            <input type="text" class="form-control r" required>
+                                                            <input name="text_partner_edu" id="list_education`+num_education+`_partner" onKeyup="stack_list_education('list_education`+num_education+`')" type="text" class="form-control r" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -481,8 +482,8 @@
                                                         <span class="label-text-l">Start & End Date</span>
                                                         <div class="row">
                                                             <div class="input-group mb-3 col-md-6">
-                                                                <input type="date" class="form-control l" required>
-                                                                <input type="date" class="form-control l" required>
+                                                                <input name="text_partner_start_edu" id="list_education`+num_education+`_start_edu" onChange="stack_list_education('list_education`+num_education+`')" type="date" class="form-control l" required>
+                                                                <input name="text_partner_end_edu" id="list_education`+num_education+`_end_edu" onChange="stack_list_education('list_education`+num_education+`')" type="date" class="form-control l" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -530,6 +531,18 @@
 
             var start = $('#'+id+'_start_emp').val();
             var end = $('#'+id+'_end_emp').val();
+
+            $('#stack_'+id).html(job+ ' at '+at);
+            $('#year_stack_'+id).html(start+ ' - '+end);
+        }
+
+        function stack_list_education(id){
+            // alert(id);
+            var job = $('#'+id).val();
+            var at = $('#'+id+'_partner').val();
+
+            var start = $('#'+id+'_start_edu').val();
+            var end = $('#'+id+'_end_edu').val();
 
             $('#stack_'+id).html(job+ ' at '+at);
             $('#year_stack_'+id).html(start+ ' - '+end);
