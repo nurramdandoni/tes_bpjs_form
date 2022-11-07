@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <form class="row g-3 needs-validation" novalidate>
+    <form id="frm" class="row g-3 needs-validation" novalidate>
 
         <div class="bg">
             <div class="row">
@@ -37,7 +37,7 @@
                                 <span class="label-text-l">Wanted Job Title</span>
                                 <i class="fa-regular fa-circle-question"></i>
                                 <div class="input-group mb-3">
-                                    <input type="text" min="3" class="form-control l" required>
+                                    <input name="text_job" type="text" min="3" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -53,13 +53,13 @@
                             <div class="col-md-6">
                                 <span class="label-text-l">First Name</span>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control l" required>
+                                    <input name="text_fname" type="text" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <span class="label-text-r">Last Name</span>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control r" required>
+                                    <input name="text_lname" type="text" class="form-control r" required>
                                 </div>
                             </div>
                         </div>
@@ -69,13 +69,13 @@
                             <div class="col-md-6">
                                 <span class="label-text-l">Email</span>
                                 <div class="input-group mb-3">
-                                    <input type="email" class="form-control l" required>
+                                    <input name="text_email" type="email" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <span class="label-text-r">Phone</span>
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control r" required>
+                                    <input name="text_phone" type="number" class="form-control r" required>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                             <div class="col-md-6">
                                 <span class="label-text-l">Country</span>
                                 <div class="input-group mb-3">
-                                    <select name="" class="form-control l" required>
+                                    <select name="text_country" class="form-control l" required>
                                         <option value="1">Indonesia</option>
                                         <option value="2">Malaysia</option>
                                     </select>
@@ -94,7 +94,7 @@
                             <div class="col-md-6">
                                 <span class="label-text-r">City</span>
                                 <div class="input-group mb-3">
-                                    <select name="" class="form-control r" required>
+                                    <select name="text_city" class="form-control r" required>
                                         <option value="1">lajsdjsa</option>
                                     </select>
                                 </div>
@@ -106,13 +106,13 @@
                             <div class="col-md-6">
                                 <span class="label-text-l">Address</span>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control l" required>
+                                    <input name="text_address" type="text" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <span class="label-text-r">Postal Code</span>
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control r" required>
+                                    <input name="text_postal" type="number" class="form-control r" required>
                                 </div>
                             </div>
                         </div>
@@ -123,14 +123,14 @@
                                 <span class="label-text-l">Driving Licence</span>
                                 <i class="fa-regular fa-circle-question"></i>
                                 <div class="input-group mb-3">
-                                    <input type="number" class="form-control l" required>
+                                    <input name="text_driving_licence" type="number" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <span class="label-text-r">Nationality</span>
                                 <i class="fa-regular fa-circle-question"></i>
                                 <div class="input-group mb-3">
-                                    <select name="" class="form-control r" required>
+                                    <select name="text_nationality" class="form-control r" required>
                                         <option value="WNI">Warga Negara Indonesia (WNI)</option>
                                         <option value="WNA">Warga Negara Asing (WNA)</option>
                                     </select>
@@ -143,14 +143,14 @@
                             <div class="col-md-6">
                                 <span class="label-text-l">Place Of Birth</span>
                                 <div class="input-group mb-3">
-                                    <input type="text" pattern="[A-Za-z]{>3}" class="form-control l" required>
+                                    <input name="text_place" type="text" pattern="[A-Za-z]{>3}" class="form-control l" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <span class="label-text-r">Date Of Birth</span>
                                 <i class="fa-regular fa-circle-question"></i>
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control r" required>
+                                    <input name="text_date_birth" type="date" class="form-control r" required>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                         <!-- baris -->
                         <div class="row">
                             <div class="col-md-12 editor">
-                                <textarea id="editor" name="summary"></textarea>
+                                <textarea name="text_summary" id="editor" name="summary"></textarea>
                             </div>
                         </div>
                         <!-- akhir baris -->
@@ -391,7 +391,8 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading` + num_employ + `">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse` + num_employ + `" aria-expanded="true" aria-controls="collapse` + num_employ + `">
-                                                <span id="stack_list` + num_employ + `">(Not specified)</span>
+                                                <span id="stack_list_employment` + num_employ + `">(Not specified)</span> &nbsp &nbsp|&nbsp &nbsp
+                                                <span id="year_stack_list_employment` + num_employ + `">(Not specified)</span>
                                             </button>
                                         </h2>
                                         <div id="collapse` + num_employ + `" class="accordion-collapse collapse show" aria-labelledby="heading` + num_employ + `" data-bs-parent="#accordionExample">
@@ -400,13 +401,13 @@
                                                     <div class="col-md-6">
                                                         <span class="label-text-l">Job Title</span>
                                                         <div class="input-group mb-3">
-                                                            <input type="text" class="form-control l" required>
+                                                            <input name="text_job" id="list_employment`+num_employ+`" onKeyup="stack_list_employment('list_employment`+num_employ+`')" type="text" class="form-control l" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <span class="label-text-r">Employer</span>
                                                         <div class="input-group mb-3">
-                                                            <input type="text" class="form-control r" required>
+                                                            <input name="text_partner" id="list_employment`+num_employ+`_partner" onKeyup="stack_list_employment('list_employment`+num_employ+`')" type="text" class="form-control r" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -415,15 +416,15 @@
                                                         <span class="label-text-l">Start & End Date</span>
                                                         <div class="row">
                                                             <div class="input-group mb-3 col-md-6">
-                                                                <input type="date" class="form-control l" required>
-                                                                <input type="date" class="form-control l" required>
+                                                                <input name="text_partner_start" id="list_employment`+num_employ+`_start_emp" onChange="stack_list_employment('list_employment`+num_employ+`')" type="date" class="form-control l" required>
+                                                                <input name="text_partner_end" id="list_employment`+num_employ+`_end_emp" onChange="stack_list_employment('list_employment`+num_employ+`')" type="date" class="form-control l" required>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <span class="label-text-r">City</span>
                                                         <div class="input-group mb-3">
-                                                            <input type="text" class="form-control r" required>
+                                                            <input name="text_city_emp" type="text" class="form-control r" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -520,6 +521,18 @@
             } else {
 
             }
+        }
+
+        function stack_list_employment(id){
+            // alert(id);
+            var job = $('#'+id).val();
+            var at = $('#'+id+'_partner').val();
+
+            var start = $('#'+id+'_start_emp').val();
+            var end = $('#'+id+'_end_emp').val();
+
+            $('#stack_'+id).html(job+ ' at '+at);
+            $('#year_stack_'+id).html(start+ ' - '+end);
         }
 
         function skills_bg_interactive(object){
