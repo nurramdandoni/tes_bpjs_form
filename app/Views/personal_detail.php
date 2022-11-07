@@ -190,11 +190,14 @@
                             </div>
                         </div>
                         <!-- akhir baris -->
+                        <div class="employment_list">
+                            <span class="badge bg-secondary">employment</span>
+                        </div>
                         <!-- baris -->
                         <div class="row">
                             <div class="col-md-6">
                                 <i class="fa-regular fa-plus"></i>
-                                <span class="added">Add Employment</span>
+                                <span onclick="add_stack('employment')" class="added">Add Employment</span>
                             </div>
                         </div>
                         <!-- akhir baris -->
@@ -212,11 +215,14 @@
                             </div>
                         </div>
                         <!-- akhir baris -->
+                        <div class="education_list">
+                            <span class="badge bg-secondary">education</span>
+                        </div>
                         <!-- baris -->
                         <div class="row">
                             <div class="col-md-6">
                                 <i class="fa-regular fa-plus"></i>
-                                <span class="added">Add Education</span>
+                                <span onclick="add_stack('education')" class="added">Add Education</span>
                             </div>
                         </div>
                         <!-- akhir baris -->
@@ -241,7 +247,7 @@
                             </div>
                             <div class="col-md-6">
                                 <i class="fa-regular fa-plus"></i>
-                                <span class="added">Add Skills</span>
+                                <span onclick="add_stack('skills')" class="added">Add Skills</span>
                             </div>
                         </div>
                         <!-- akhir baris -->
@@ -319,6 +325,7 @@
         }
 
         .added {
+            cursor: pointer;
             margin-top: 20px;
             color: #2C99F1;
             font-weight: bold;
@@ -330,7 +337,13 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        .btn-primary{
+        .appending {
+            margin-left: 3px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
             margin-top: 40px;
             width: 100%;
         }
@@ -342,31 +355,37 @@
         }
     </style>
     <script>
+        function add_stack(stack){
+            $('.'+stack+'_list').append('<span class="badge bg-secondary appending">New</span>');
+        }
+
         CKEDITOR.replace('editor', {
             height: 100,
             size: 2
 
         });
 
-        (function () {
-  'use strict'
+        (function() {
+            'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        
     </script>
 </body>
 
