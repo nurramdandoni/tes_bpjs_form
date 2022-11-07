@@ -190,8 +190,11 @@
                             </div>
                         </div>
                         <!-- akhir baris -->
-                        <div class="employment_list">
-                            <span class="badge bg-secondary">employment</span>
+                        <div>
+                            <!-- employment -->
+                            <div class="accordion employment_list" id="accordionExample">
+                            </div>
+                            <!-- akhir employment -->
                         </div>
                         <!-- baris -->
                         <div class="row">
@@ -260,6 +263,8 @@
             </div>
         </div>
     </form>
+
+
 
     <style lang="textstyle/css">
         body {
@@ -337,6 +342,7 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
+
         .appending {
             margin-left: 3px;
             margin-top: 10px;
@@ -348,6 +354,11 @@
             width: 100%;
         }
 
+        .accordion {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
         #editor {
             border-radius: 10px;
             background-color: #F8F8F8;
@@ -355,8 +366,73 @@
         }
     </style>
     <script>
-        function add_stack(stack){
-            $('.'+stack+'_list').append('<span class="badge bg-secondary appending">New</span>');
+        var num_employ = 1;
+
+        function add_stack(stack) {
+            if (num_employ > 1) {
+
+                console.log(num_employ);
+                for (var i = num_employ; i > 0; i--) {
+                    $('#collapse' + i).removeClass('show');
+                }
+            }
+            $('.' + stack + '_list').append(`
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading` + num_employ + `">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse` + num_employ + `" aria-expanded="true" aria-controls="collapse` + num_employ + `">
+                                            <span id="stack_list` + num_employ + `">(Not specified)</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse` + num_employ + `" class="accordion-collapse collapse show" aria-labelledby="heading` + num_employ + `" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span class="label-text-l">Job Title</span>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control l" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="label-text-r">Employer</span>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control r" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span class="label-text-l">Start & End Date</span>
+                                                    <div class="row">
+                                                        <div class="input-group mb-3 col-md-6">
+                                                            <input type="date" class="form-control l" required>
+                                                            <input type="date" class="form-control l" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="label-text-r">City</span>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control r" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 editor_employed">
+                                                    <textarea id="editor_employed` + num_employ + `" name="employed_history[]"></textarea>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+            `);
+            var editor = 'editor_employed'+num_employ;
+            CKEDITOR.replace(editor, {
+                height: 100,
+                size: 2
+
+            });
+            num_employ++;
         }
 
         CKEDITOR.replace('editor', {
@@ -384,8 +460,6 @@
                     }, false)
                 })
         })()
-
-        
     </script>
 </body>
 
